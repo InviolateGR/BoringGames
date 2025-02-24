@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="tic-tac-toe-styles.css"> <!-- Keep styles consistent -->
+</head>
+<body>
+
+    <!-- Game Container -->
+    <div class="game-container" id="gameContainer">
+        <h1 class="game-title">Tic-Tac-Toe</h1>
+        <h2 id="statusText"></h2>
+
+        <!-- Game Board -->
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <!-- Game Controls -->
+        <button id="reset" class="game-btn">Reset Game</button>
+    </div>
+
+    <!-- Footer (Same as Landing Page) -->
+    <footer>
+        <p>Created by <b>Gowshick Raja</b> | &copy; 2025</p>
+        <div class="footer-links">
+            <a href="https://github.com/InviolateGR" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/gowshick-raja-b-4ab84a258/" target="_blank">LinkedIn</a>
+            <a href="mailto:gowshickrajab@gmail.com">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="common.js"></script> <!-- Common Effects -->
+    <script src="tic-tac-toe.js"></script> <!-- Tic-Tac-Toe Logic -->
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* Game Page Styling */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #6735ff;
+    margin: 0;
+    box-sizing: border-box;
+    transition: background 0.5s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.6s forwards ease-in-out;
+}
+
+.game-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 2px solid #333;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.win {
+    background-color: #5cb85c !important;
+    color: white;
+}
+
+.game-btn {
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background: #fff;
+    color: #6735ff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.game-btn:hover {
+    box-shadow: 3px 3px 9px rgba(28, 1, 91, 0.6);
+    color: #1c015b;
+    background: #FFD700;
+}
+
+/* Footer (Same as Landing Page) */
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 5px;
+}
+
+.footer-links a {
+    color: #FFD700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #FF4500;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Winning Animation (Blinking Effect) */
+.win {
+    animation: blink 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+    from { background-color: #94ff94; }
+    to { background-color: #4CAF50; }
+}
+
+/* Draw Animation (Shake Effect) */
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Status Display */
+#statusText {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    color: #ffffff;
+}
