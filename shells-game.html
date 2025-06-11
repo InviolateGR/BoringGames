@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shells Game - BoringGames</title>
+    <link rel="stylesheet" href="shells-game-styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Shells Game</h1>
+
+    <div class="difficulty">
+      <label>Select Difficulty:</label>
+      <select id="difficultySelect">
+        <option value="3">Easy (3 Cups)</option>
+        <option value="5">Medium (5 Cups)</option>
+      </select>
+    </div>
+    <div class="startgame-container">
+      <button id="startGame">Start Game</button>
+    </div>
+
+    <div class="cups-area" id="cupsArea"></div>
+
+    <div class="stats">
+      <h3>Game Stats</h3>
+      <table>
+        <tr><td>Total Tries:</td><td id="totalTries">0</td></tr>
+        <tr><td>Wins:</td><td id="winCount">0</td></tr>
+        <tr><td>Losses:</td><td id="lossCount">0</td></tr>
+      </table>
+    </div>
+
+    <p id="resultMessage"></p>
+
+  </div>
+
+  <footer>
+      <p>Created by <b>Gowshick Raja</b> | &copy; 2025</p>
+      <div class="footer-links">
+      <a href="https://github.com/InviolateGR" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/gowshick-raja-b-4ab84a258/" target="_blank">LinkedIn</a>
+      <a href="mailto:gowshickrajab@gmail.com">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="common.js"></script> <!-- Common Effects -->
+  <script src="shells-game.js"></script> <!-- Shells Game Logic -->
+
+</body>
+</html>
